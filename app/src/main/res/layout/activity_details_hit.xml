@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="imageViewModelDetail"
+            type="com.images.androidcodingchallenge.viewmodel.DetailImageViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:divider="@drawable/divider_shape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.DetailsHitActivity">
+        <ScrollView
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:divider="@drawable/divider_shape"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/largeImage"
+                    android:padding="@dimen/text_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/image_height"
+                    android:largeImageURL="@{imageViewModelDetail.largeImageURL}" />
+                <TextView
+                    android:padding="@dimen/text_padding"
+                    style="@style/detailTextViewStyle"
+                    android:text="@{imageViewModelDetail.getUser}" />
+
+                <TextView
+                    android:padding="@dimen/text_padding"
+                    style="@style/detailTextViewStyle"
+                    android:text="@{imageViewModelDetail.getImageTags}" />
+
+                <TextView
+                    android:padding="@dimen/text_padding"
+                    style="@style/detailTextViewStyle"
+                    android:text="@{imageViewModelDetail.getComments}" />
+
+                <TextView
+                    android:padding="@dimen/text_padding"
+                    style="@style/detailTextViewStyle"
+                    android:text="@{imageViewModelDetail.getLikes}" />
+
+                <TextView
+                    android:padding="@dimen/text_padding"
+                    style="@style/detailTextViewStyle"
+                    android:text="@{imageViewModelDetail.getFavorites}" />
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</layout>

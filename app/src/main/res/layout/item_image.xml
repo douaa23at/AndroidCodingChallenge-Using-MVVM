@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="imageViewModel"
+            type="com.images.androidcodingchallenge.viewmodel.ImageViewModel"/>
+    </data>
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_margin="5dp"
+        android:elevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:showDividers="middle"
+        android:divider="@drawable/divider_shape"
+        android:dividerPadding="1dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_margin="8dp"
+            android:previewURL="@{imageViewModel.previewURL}"
+
+            />
+        <TextView
+            android:text="@{imageViewModel.getUser}"
+            android:id="@+id/userName"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+        <TextView
+            android:text="@{imageViewModel.getImageTags}"
+            android:id="@+id/tags"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidCodingChallenge</string>
+    <string name="network_connection">Please connect to the internet !</string>
+    <string name="error_api">An error occurred please try later!</string>
+    <string name="title_activity_hits">HitsActivity</string>
+    <string name="dialog_message">Do you want to see more details?</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="init_search_word">Fruits</string>
+</resources>
