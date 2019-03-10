@@ -1,20 +1,16 @@
 package com.images.androidcodingchallenge.di.component;
 
 
-import android.content.Context;
+import com.images.androidcodingchallenge.di.module.AppModule;
+import com.images.androidcodingchallenge.di.module.RetrofitModule;
+import com.images.androidcodingchallenge.view.HitsActivity;
+import javax.inject.Singleton;
+import dagger.Component;
 
-import com.images.androidcodingchallenge.api.PixabayAPI;
 
-
-//@ApplicationScope
-//@Component(modules = {ContextModule.class, RetrofitModule.class})
+@Singleton
+@Component(modules = {RetrofitModule.class, AppModule.class})
 public interface ApplicationComponent {
-
-    PixabayAPI getPixabayAPI();
-
-    // @ApplicationContext
-    Context provideContext();
-
-    //public void injectApplication(MyApplication myApplication);
+      void inject(HitsActivity hitsActivity);
 
 }

@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.images.androidcodingchallenge.R;
 import com.images.androidcodingchallenge.databinding.ItemImageBinding;
-import com.images.androidcodingchallenge.databinding.ItemImageDetailBinding;
 import com.images.androidcodingchallenge.model.Hit;
 import com.images.androidcodingchallenge.util.PassVariableContext;
 import com.images.androidcodingchallenge.view.DetailsHitActivity;
@@ -27,20 +26,18 @@ import kotlin.Unit;
 
 public class ImageAdapter  extends RecyclerView.Adapter<ImageAdapter.ImageHolder> {
 
-    List<Hit> hits ;
-    LayoutInflater inflater;
-    Context ctx;
-    AlertDialog dialog;
-    AlertDialog.Builder builder;
+    private List<Hit> hits ;
+    private Context ctx;
+    private AlertDialog dialog;
+    private AlertDialog.Builder builder;
 
     public ImageAdapter(Context context, @NonNull List<Hit> imageList) {
-        inflater = LayoutInflater.from(context);
         this.hits = imageList;
         this.ctx = context;
     }
 
     @Override
-    public ImageHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ImageHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ItemImageBinding itemImageBinding = DataBindingUtil.inflate(
                 LayoutInflater.from(parent.getContext()),R.layout.item_image,parent,false);
         return new ImageHolder(itemImageBinding);
@@ -97,11 +94,11 @@ public class ImageAdapter  extends RecyclerView.Adapter<ImageAdapter.ImageHolder
         return hits.size();
     }
 
-    public static class ImageHolder extends RecyclerView.ViewHolder {
+     static class ImageHolder extends RecyclerView.ViewHolder {
 
         ItemImageBinding itemImageBinding ;
 
-        public ImageHolder(ItemImageBinding itemView) {
+         ImageHolder(ItemImageBinding itemView) {
             super(itemView.getRoot());
             itemImageBinding = itemView;
         }

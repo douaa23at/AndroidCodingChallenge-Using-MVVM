@@ -14,7 +14,6 @@ public class ImageViewModel extends BaseObservable {
 
     private Hit hit;
 
-
     public ImageViewModel(Hit hit) {
         this.hit = hit;
 

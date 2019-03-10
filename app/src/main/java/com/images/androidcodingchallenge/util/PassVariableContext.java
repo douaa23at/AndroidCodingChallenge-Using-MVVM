@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 
 public class PassVariableContext {
+
     private static final String KEY_HIT = "Hit";
     private static PassVariableContext instance = new PassVariableContext();
     private HashMap<String, Object> map = new HashMap<>();
@@ -18,4 +19,5 @@ public class PassVariableContext {
     public static PassVariableContext getInstance(){
         return instance;
     }
+
 }

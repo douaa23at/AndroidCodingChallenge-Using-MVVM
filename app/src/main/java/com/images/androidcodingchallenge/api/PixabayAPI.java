@@ -12,6 +12,7 @@ public interface PixabayAPI {
     String PIXABAY_BASE_URL = "https://pixabay.com/";
     String PIXABAY_KEY = "11698815-508762a9392b1a2f56a85052b";
     String IMAGE_TYPE = "photo";
+
     @GET("/api")
     Observable<Response<Basic>> getImages(@Query("key") String key,
                                                        @Query("q") String q,
