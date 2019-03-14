@@ -1,5 +1,5 @@
 # AndroidCodingChallengeC
-This is an Android project thats allow users search for photos by query from Pixabay API using the following :
+This is an Android project that allow users to search for photos by query from Pixabay API using the following :
 1-MVVM architecture;
 2-RxJava 2;
 3-RxBindings;
